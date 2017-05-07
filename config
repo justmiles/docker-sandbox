@@ -1,0 +1,50 @@
+[global_config]
+  window_state = maximise
+  handle_size = 0
+  title_hide_sizetext = True
+  always_split_with_profile = True
+  sticky = True
+  geometry_hinting = False
+  enabled_plugins = CustomCommandsMenu, InactivityWatch, TestPlugin, ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, Logger, LaunchpadBugURLHandler, ClonedSplittingMenu
+  suppress_multiple_term_dialog = True
+  borderless = True
+  title_receive_bg_color = "#84c238"
+  title_transmit_bg_color = "#668d63"
+  scroll_tabbar = True
+  inactive_color_offset = 0.74
+[keybindings]
+  close_term = <Primary>w
+  edit_window_title = None
+[profiles]
+  [[default]]
+    scrollbar_position = hidden
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    copy_on_selection = True
+    background_image = /home/developer/.config/terminator/background.jpg
+    background_darkness = 0.93
+    scrollback_lines = 5000
+    background_type = image
+    use_system_font = False
+    cursor_color = "#ffffff"
+    foreground_color = "#839496"
+    login_shell = True
+    icon_bell = False
+    show_titlebar = False
+    custom_command = source ~/.profile
+    cursor_shape = ibeam
+    font = Monospace 9
+    background_color = "#0f0f0f"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+  [[CustomCommandsMenu]]
+    [[[ten biggest files]]]
+      command = du -sh * | sort -nr | head -10
+      enabled = True
+      name = ten biggest files
